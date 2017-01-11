@@ -157,7 +157,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-@font-face { font-family: 'Glyphicons Halflings'; src: url("assets/fonts/glyphicons-halflings-regular.eot"); src: url("assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+@font-face { font-family: 'Glyphicons Halflings'; src: url("glyphicons-halflings-regular.eot"); src: url("glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("glyphicons-halflings-regular.woff") format("woff"), url("glyphicons-halflings-regular.ttf") format("truetype"), url("glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -1905,7 +1905,7 @@ ul.nav-tabs li.highlight.active.highlight a { background-color: #4ecd7a; color: 
 /*!==========================================================================
    Font Awesome 4.0.3
    ========================================================================== */
-@font-face { font-family: 'FontAwesome'; src: url("assets/fonts/fontawesome-webfont.eot?v=4.0.3"); src: url("assets/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("assets/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("assets/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("assets/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: font-url("fontawesome-webfont.eot"); src: font-url("fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), font-url("fontawesome-webfont.woff?v=4.0.3") format("woff"), font-url("fontawesome-webfont.ttf?v=4.0.3") format("truetype"), font-url("fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
 
 .fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -2719,7 +2719,7 @@ ul.nav-tabs li.highlight.active.highlight a { background-color: #4ecd7a; color: 
 /*!==========================================================================
    ElegantIcons Font
    ========================================================================== */
-@font-face { font-family: 'ElegantIcons'; src: url("assets/fonts/ElegantIcons.eot"); src: url("assets/fonts/ElegantIcons.eot?#iefix") format("embedded-opentype"), url("assets/fonts/ElegantIcons.woff") format("woff"), url("assets/fonts/ElegantIcons.ttf") format("truetype"), url("assets/fonts/ElegantIcons.svg#ElegantIcons") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'ElegantIcons'; src: url("ElegantIcons.eot"); src: url("ElegantIcons.eot?#iefix") format("embedded-opentype"), url("ElegantIcons.woff") format("woff"), url("ElegantIcons.ttf") format("truetype"), url("ElegantIcons.svg#ElegantIcons") format("svg"); font-weight: normal; font-style: normal; }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before { font-family: 'ElegantIcons'; content: attr(data-icon); speak: none; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -4867,7 +4867,7 @@ ul.gallety-filters > li.gf-underline { position: absolute; bottom: 0; left: 0; w
 .vjs-mental-skin:hover .vjs-big-play-button, .vjs-mental-skin:hover .vjs-big-play-button:focus { background: transparent; box-shadow: none; -webkit-box-shadow: none; }
 
 /* ======================== Loading spinners ======================== */
-.loading-spinner { display: inline-block; width: 32px; height: 32px; vertical-align: middle; background: url(assets/img/spinner_black.gif); }
+.loading-spinner { display: inline-block; width: 32px; height: 32px; vertical-align: middle; background: image-url(spinner_black.gif); }
 
 .cssanimations .loading-spinner { background: none; font: 32px/32px FontAwesome; color: #76d898; -webkit-animation: spin 2s infinite linear; -moz-animation: spin 2s infinite linear; -o-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
 .cssanimations .loading-spinner:before { content: "\f110"; }
