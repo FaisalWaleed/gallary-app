@@ -4781,7 +4781,7 @@ ul.gallety-filters > li.gf-underline { position: absolute; bottom: 0; left: 0; w
 @media (min-width: 768px) { .gallery .gl-item { float: left; width: 50%; } }
 @media (min-width: 992px) { .gallery .gl-item { float: left; width: 33.33333%; } }
 @media (min-width: 1200px) { .gallery .gl-item { float: left; width: 25%; } }
-.gallery .gl-item.gl-loading { min-height: 225px; background: url(assets/img/spinner_black.gif) center center no-repeat; }
+.gallery .gl-item.gl-loading { min-height: 225px; background-image: image-url(spinner_black.gif) center center no-repeat; }
 .gallery .gl-item.gl-double { position: relative; min-height: 1px; padding-left: 0; padding-right: 0; position: relative; min-height: 1px; padding-left: 0; padding-right: 0; position: relative; min-height: 1px; padding-left: 0; padding-right: 0; }
 @media (min-width: 768px) { .gallery .gl-item.gl-double { float: left; width: 100%; } }
 @media (min-width: 992px) { .gallery .gl-item.gl-double { float: left; width: 66.66667%; } }
