@@ -3,10 +3,38 @@
 	<head>
 	  <title>Gallery</title>
 	  <%= stylesheet_link_tag 'application'%>
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <%= javascript_include_tag 'application' %>
 	  <%= csrf_meta_tags %>
+   	<title>VQ</title>
 	</head>
-	<body class="menu-bar-ontop black-body">
-		<%= yield %>
+
+	<body class="menu-bar-ontop black-body" >
+		<div class="row">
+			<div class="logo-header">
+					<%= image_tag "versuassions-logo.jpg", class: "img-responsive", style: ""%>
+					<h2><span style= "color: white">Versuassions Quotes</span>
+					</h2>
+			</div>
+		</div>
+    <div id="wrapper">
+			<%= render 'layouts/sidebar' %>
+			<div id="main">
+				<%= render 'layouts/header' %>
+				<%= yield %>
+			</div>
+		</div>
 	</body>
 </html>
+
+<style type="text/css">
+	.logo-header{
+		display: flex;
+    align-items: center;
+    justify-content: center
+	}
+	.logo-header img{
+		width: 35px;
+		margin-right: 10px;
+	}
+</style>
