@@ -1,8 +1,22 @@
-
+<div class="row">
+   <div class="logo-header">
+         <%= image_tag "versuassions-logo.jpg", class: "img-responsive", style: ""%>
+         <h2><span style= "color: white">Versuassions Quotes</span>
+         </h2>
+   </div>
+</div>
+<div id="wrapper">
+   <%= render 'layouts/sidebar' %>
+   <div id="main">
+      <%= render 'layouts/header' %>
+   </div>
    <div class="section no-padding st-invert">
       <section>
          <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
-            <%= render 'listing' %>
+            <% @listings.try(:each) do |listing| %>
+               <%= render 'listing', listing: listing %>
+            <% end %>
+
          </ul> <!-- gallery -->
       </section>
    </div> <!-- section -->
@@ -12,3 +26,44 @@
          <span class="loading-spinner" style="display:none;"></span>
       </footer>
    </div>
+
+   <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+           <div class="modal-content">
+               <div class="modal-body">
+                   <img src="" alt="" />
+               </div>
+               <div class="mb-social-modal" >
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                  <a href="#"><i class="fa fa-tumblr"></i></a>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<style type="text/css">
+   #lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+   }
+
+   #lightbox .close {
+       opacity: 1;
+       color: rgb(255, 255, 255);
+       background-color: rgb(25, 25, 25);
+       padding: 5px 8px;
+       border-radius: 30px;
+       border: 2px solid rgb(255, 255, 255);
+       position: absolute;
+       top: -15px;
+       right: -55px;
+       
+       z-index:1032;
+   }
+</style>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1>All Quotes <span class="pull-right"><%= link_to 'Add Quote', new_listing_path, class: "btn btn-primary" %></span> </h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= image_tag listing.image %></td>
+        <td><%= link_to 'Show', listing, class: "btn btn-info" %>
+        <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-primary" %>
+        <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

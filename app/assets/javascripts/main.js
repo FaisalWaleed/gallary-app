@@ -496,16 +496,16 @@ function init_gallery_w_preview()
    // =================================  Preview Part
 
    // ==== On item Click
-   $gallery.on('click', '.gl-item:not(.gl-preview) > a', function(e){
-      e.preventDefault();
-      var $this = $(this).parent();
+   // $gallery.on('click', '.gl-item:not(.gl-preview) > a', function(e){
+   //    e.preventDefault();
+   //    var $this = $(this).parent();
 
-      remove_preview();
+   //    remove_preview();
 
-      if(!$last_clicked_item.is($this)) show_preview($this);
-      else $last_clicked_item = $();
+   //    if(!$last_clicked_item.is($this)) show_preview($this);
+   //    else $last_clicked_item = $();
 
-   });
+   // });
 
    // Close button
    $gallery.on('click', '.glp-close', function(e){

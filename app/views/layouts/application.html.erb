@@ -3,27 +3,28 @@
 	<head>
 	  <title>Gallery</title>
 	  <%= stylesheet_link_tag 'application'%>
-	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <%= javascript_include_tag 'application' %>
+
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- 	  	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.0/ekko-lightbox.css">
+	  <script src = "https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.0/ekko-lightbox.js"></script> -->
 	  <%= csrf_meta_tags %>
    	<title>VQ</title>
 	</head>
 
 	<body class="menu-bar-ontop black-body" >
-		<div class="row">
-			<div class="logo-header">
-					<%= image_tag "versuassions-logo.jpg", class: "img-responsive", style: ""%>
-					<h2><span style= "color: white">Versuassions Quotes</span>
-					</h2>
+		<% if current_user %>
+			<div class="row" class="padding: 50px">
+				<div class="col-md-12">
+					<%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', class: "pull-right btn btn-info", style: "margin-left: 30px" %>
+				</div>
 			</div>
-		</div>
-    <div id="wrapper">
-			<%= render 'layouts/sidebar' %>
-			<div id="main">
-				<%= render 'layouts/header' %>
-				<%= yield %>
-			</div>
-		</div>
+		<% end %>
+		<%= yield %>
 	</body>
 </html>
 
@@ -36,5 +37,10 @@
 	.logo-header img{
 		width: 35px;
 		margin-right: 10px;
+	}
+	.main_menu {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
 	}
 </style>

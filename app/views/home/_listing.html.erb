@@ -1,62 +1,15 @@
 <li class="gl-item gl-fixed-ratio-item" data-category="*" data-order="30" style="position: absolute; left: 500px; top: 0px;">
-               <a href="#">
-                  <figure>
-                     <%= image_tag asset_path("33.jpg") %>
-                     <figcaption>
-                        <div class="middle"><div class="middle-inner">
-                           <p class="gl-item-icon"><i class="fa fa-picture-o"></i></p>
-                           <p class="gl-item-title">Slider</p>
-                           <p class="gl-item-category">People</p>
-                        </div></div>
-                     </figcaption>
-                  </figure>
-               </a>
-               <div class="gl-preview" style="diplay:none;">
-                  <span class="glp-arrow"></span>
-                  <a href="#" class="glp-close">x</a>
-                  <div class="row gl-preview-container">
-                     <div class="col-sm-8">
-                        <div id="carousel-gallery-1" class="carousel slide" data-ride="carousel">
-                           
-                           <!-- Wrapper for slides -->
-                           <div class="carousel-inner">
-                              <div class="item active">
-                                 <%= image_tag asset_path("33.jpg") %>
-                              </div>
-                           </div>
-
-                           <!-- Indicators -->
-                           <ol class="carousel-indicators">
-                              <li data-target="#carousel-gallery-1" data-slide-to="0" class=""></li>
-                              <li data-target="#carousel-gallery-1" data-slide-to="1" class=""></li>
-                              <li data-target="#carousel-gallery-1" data-slide-to="2" class="active"></li>
-                           </ol>
-                           
-                           <!-- Controls -->
-                           <a class="left carousel-control" href="#" data-slide="prev">
-                              <span></span>
-                           </a>
-                           <a class="right carousel-control" href="#" data-slide="next">
-                              <span></span>
-                           </a>
-
-                        </div> <!-- carousel -->
-                     </div>
-                     <div class="col-sm-4 lg-preview-descr">
-                        <h4>Girl in the street</h4>
-                        <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you. </p>
-                        <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you. </p>
-                        <button class="btn btn-primary glp-readmore">Read More</button>
-                        <div class="mb-social glp-social">
-                           <p>Share</p>
-                           <a href="#"><i class="fa fa-twitter"></i></a>
-                           <a href="#"><i class="fa fa-facebook"></i></a>
-                           <a href="#"><i class="fa fa-google-plus"></i></a>
-                           <a href="#"><i class="fa fa-instagram"></i></a>
-                           <a href="#"><i class="fa fa-pinterest"></i></a>
-                           <a href="#"><i class="fa fa-tumblr"></i></a>
-                        </div>
-                     </div>
-                  </div>
-               </div> <!-- gl-preview -->
-            </li>
+   <a href= "#"  data-toggle="modal" data-target="#lightbox">
+      <figure>
+            <%= image_tag listing.image, class: 'img-fluid' %>
+             <!-- <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid"> -->
+            <figcaption>
+               <div class="middle"><div class="middle-inner">
+                  <p class="gl-item-icon"><i class="fa fa-picture-o"></i></p>
+                  <p class="gl-item-title">Slider</p>
+                  <p class="gl-item-category">People</p>
+               </div></div>
+            </figcaption>         
+      </figure>
+   </a>
+</li>
