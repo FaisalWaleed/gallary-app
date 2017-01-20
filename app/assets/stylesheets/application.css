@@ -11,5 +11,19 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require social-share-button
  *= require_self
  */
+
+@font-face {
+    font-family: 'fleurishscriptregular';
+    src: url('versuasions_logo_font-webfont.woff2') format('woff2'),
+         url('versuasions_logo_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.logo_class{
+	font-family: "fleurishscriptregular";
+	color: white;
+}

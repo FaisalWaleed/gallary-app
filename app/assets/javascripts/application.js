@@ -12,12 +12,9 @@
 //
 //= require jquery-2.1.4
 //= require jquery_ujs
+//= require social-share-button
 //= require_tree .
-// $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-//   console.log("image has been clicked...!!!");
-//   event.preventDefault();
-//   $(this).ekkoLightbox();
-// });
+
 $(document).ready(function() {
     var $lightbox = $('#lightbox');
     
