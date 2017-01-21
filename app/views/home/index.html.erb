@@ -1,8 +1,8 @@
 <%= form_for Listing.new do |f| %>
-  <%= f.hidden_field :image, value: @listings.last.image %>
+  <%= f.text_field :image, value: @listings.last.image %>
   <div class="row">
-     <div class="logo-header">
-           <h2 class="logo_class"><span style= "color: white"> Versuasions Quotes </span></h2>
+     <div class="logo-header" style="margin-top: 5px">
+           <h2 class="logo_class" style="text-transform: capitalize; font-size: 50px"><span style= "color: white"> VersuasionsQuotes </span></h2>
      </div>
   </div>
   <div id="wrapper">
@@ -34,7 +34,11 @@
                  <div class="modal-body">
                      <img src="" alt="" />
                  </div>
-                 <%= social_share_button_tag('Versuasions Quotes' ,image: f.object.image) %>
+                 <% puts "=========" %>
+                 <% puts f.object.image_url %>
+                 <% puts "=========" %>
+                 <% puts "=========" %>
+                 <%= social_share_button_tag('Versuasions Quotes' ,image: @listings.last.image) %>
                  <div class="mb-social-modal" style="color: white" >
                     <a href="#"><i style="color: white" class="fa fa-twitter"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-facebook"></i></a>
@@ -49,6 +53,33 @@
   </div>
 <% end %>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    var $lightbox = $('#lightbox');
+    
+    $('[data-target="#lightbox"]').on('click', function(event) {
+        var $img = $(this).find('img'), 
+            src = $img.attr('src'),
+            alt = $img.attr('alt'),
+            css = {
+                'maxWidth': $(window).width() - 100,
+                'maxHeight': $(window).height() - 100
+            };
+    
+        $lightbox.find('.close').addClass('hidden');
+        $lightbox.find('img').attr('src', src);
+        $lightbox.find('img').attr('alt', alt);
+        $lightbox.find('img').css(css);
+    });
+    
+    $lightbox.on('shown.bs.modal', function (e) {
+        var $img = $lightbox.find('img');
+            
+        $lightbox.find('.modal-dialog').css({'width': $img.width()});
+        $lightbox.find('.close').removeClass('hidden');
+    });
+});
+</script>
 
 <style type="text/css">
    #lightbox .modal-content {
