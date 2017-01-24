@@ -17,8 +17,8 @@
 
 @font-face {
     font-family: 'fleurishscriptregular';
-    src: url('fonts/versuasions_logo_font-webfont.woff2') ;
-    src: url('fonts/versuasions_logo_font-webfont.woff');
+    src: url('/assets/versuasions_logo_font-webfont.woff2') ;
+    src: url('/assets/versuasions_logo_font-webfont.woff');
     font-weight: normal;
     font-style: normal;
 
