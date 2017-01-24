@@ -5,6 +5,7 @@
            <h2 class="logo_class" style="text-transform: capitalize; font-size: 50px"><span style= "color: white"> VersuasionsQuotes </span></h2>
      </div>
   </div>
+
   <div id="wrapper">
      <%= render 'layouts/sidebar' %>
      <div id="main">
@@ -34,19 +35,15 @@
                  <div class="modal-body">
                      <img src="" alt="" />
                  </div>
-                 <% puts "=========" %>
-                 <% puts f.object.image_url %>
-                 <% puts "=========" %>
-                 <% puts "=========" %>
-                 <%= social_share_button_tag('Versuasions Quotes' ,image: @listings.last.image) %>
-                 <div class="mb-social-modal" style="color: white" >
+                 <%= social_share_button_tag('Versuasions Quotes') %>
+                 <!-- <div class="mb-social-modal" style="color: white" >
                     <a href="#"><i style="color: white" class="fa fa-twitter"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-facebook"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-google-plus"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-instagram"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-pinterest"></i></a>
                     <a href="#"><i style="color: white" class="fa fa-tumblr"></i></a>
-                 </div>
+                 </div> -->
              </div>
          </div>
      </div>
@@ -70,11 +67,13 @@
         $lightbox.find('img').attr('src', src);
         $lightbox.find('img').attr('alt', alt);
         $lightbox.find('img').css(css);
+        $('.social-share-button').data('img', window.location.hostname + src);
+        $('.social-share-button').data('url', window.location.hostname + src);
     });
     
     $lightbox.on('shown.bs.modal', function (e) {
         var $img = $lightbox.find('img');
-            
+
         $lightbox.find('.modal-dialog').css({'width': $img.width()});
         $lightbox.find('.close').removeClass('hidden');
     });
