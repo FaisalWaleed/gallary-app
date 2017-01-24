@@ -1,54 +1,51 @@
-<%= form_for Listing.new do |f| %>
-  <%= f.text_field :image, value: @listings.last.image %>
-  <div class="row">
-     <div class="logo-header" style="margin-top: 5px">
-           <h2 class="logo_class" style="text-transform: capitalize; font-size: 50px"><span style= "color: white"> VersuasionsQuotes </span></h2>
-     </div>
-  </div>
+<div class="row">
+   <div class="logo-header" style="margin-top: 5px">
+      <h2 class="logo_class" style="text-transform: capitalize; font-size: 50px"><span style= "color: white"> VersuasionsQuotes </span></h2>
+   </div>
+</div>
 
-  <div id="wrapper">
-     <%= render 'layouts/sidebar' %>
-     <div id="main">
-        <%= render 'layouts/header' %>
-     </div>
-     <div class="section no-padding st-invert">
-        <section>
-           <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
-              <% @listings.try(:each) do |listing| %>
-                 <%= render 'listing', listing: listing %>
-              <% end %>
+<div id="wrapper">
+   <%= render 'layouts/sidebar' %>
+   <div id="main">
+      <%= render 'layouts/header' %>
+   </div>
+   <div class="section no-padding st-invert">
+      <section>
+         <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
+            <% @listings.try(:each) do |listing| %>
+               <%= render 'listing', listing: listing %>
+            <% end %>
 
-           </ul> <!-- gallery -->
-        </section>
-     </div> <!-- section -->
-     <div id="footer" class="ft-single-post text-center">
-        <footer>
-           <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a>
-           <span class="loading-spinner" style="display:none;"></span>
-        </footer>
-     </div>
+         </ul> <!-- gallery -->
+      </section>
+   </div> <!-- section -->
+   <div id="footer" class="ft-single-post text-center">
+      <footer>
+         <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a>
+         <span class="loading-spinner" style="display:none;"></span>
+      </footer>
+   </div>
 
-     <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-             <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
-             <div class="modal-content">
-                 <div class="modal-body">
-                     <img src="" alt="" />
-                 </div>
-                 <%= social_share_button_tag('Versuasions Quotes') %>
-                 <!-- <div class="mb-social-modal" style="color: white" >
-                    <a href="#"><i style="color: white" class="fa fa-twitter"></i></a>
-                    <a href="#"><i style="color: white" class="fa fa-facebook"></i></a>
-                    <a href="#"><i style="color: white" class="fa fa-google-plus"></i></a>
-                    <a href="#"><i style="color: white" class="fa fa-instagram"></i></a>
-                    <a href="#"><i style="color: white" class="fa fa-pinterest"></i></a>
-                    <a href="#"><i style="color: white" class="fa fa-tumblr"></i></a>
-                 </div> -->
-             </div>
-         </div>
-     </div>
-  </div>
-<% end %>
+   <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+           <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+           <div class="modal-content">
+               <div class="modal-body">
+                   <img src="" alt="" />
+               </div>
+               <%= social_share_button_tag('Versuasions Quotes') %>
+               <!-- <div class="mb-social-modal" style="color: white" >
+                  <a href="#"><i style="color: white" class="fa fa-twitter"></i></a>
+                  <a href="#"><i style="color: white" class="fa fa-facebook"></i></a>
+                  <a href="#"><i style="color: white" class="fa fa-google-plus"></i></a>
+                  <a href="#"><i style="color: white" class="fa fa-instagram"></i></a>
+                  <a href="#"><i style="color: white" class="fa fa-pinterest"></i></a>
+                  <a href="#"><i style="color: white" class="fa fa-tumblr"></i></a>
+               </div> -->
+           </div>
+       </div>
+   </div>
+</div>
 
 <script type="text/javascript">
   $(document).ready(function() {

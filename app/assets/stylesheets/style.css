@@ -4420,7 +4420,7 @@ img { max-width: 100%; }
 #menu-bar h3.mb-site-title img { margin-top: -4px; }
 #menu-bar h3.mb-site-title span { display: inline-block; margin-left: 15px; }
 #menu-bar h4 { margin: 0; padding: 0 0 10px; color: #8e9095; font-size: 15px; text-transform: uppercase; }
-#menu-bar .mb-site-descr { font-size: 12px; }
+#menu-bar .mb-site-descr { font-size: 36px; margin-left: -15px;}
 #menu-bar .mb-footer { font-size: 14px; line-height: 22px; }
 #menu-bar .mb-footer p { color: #444649; }
 #menu-bar .mb-copyright { font-size: 12px; line-height: 14px; margin-bottom: 40px; }
