@@ -1,0 +1,13 @@
+// Append new data
+
+$newItems = $("<%=j render 'listing' %>");
+$("#gallery-w-preview").isotope('insert', $newItems);
+
+// Update pagination link
+<% if @listings.last_page? %>
+  $('.pagination').html("All images loaded");
+<% else %>
+  $('.pagination').html("<%=j link_to_next_page(@listings, 'Next Page', remote: true,  style: 'display: none;') %>");
+<% end %>
+
+$('.loading-spinner').hide();

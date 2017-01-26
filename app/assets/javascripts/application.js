@@ -13,4 +13,5 @@
 //= require jquery-2.1.4
 //= require jquery_ujs
 //= require social-share-button
+//= require jquery.infinite-pages
 //= require_tree .

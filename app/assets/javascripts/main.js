@@ -389,7 +389,7 @@ function init_gallery_isotope()
 // Isotope Gallery with expanding previews
 // ============================================================================
 
-function init_gallery_w_preview()
+function init_gallery_w_preview ()
 {
    // =========== Variables
 
@@ -625,10 +625,7 @@ function init_gallery_w_preview()
 
       $carousel.carousel();
    }
-
 } // init_gallery_w_preview
-
-
 
 // ============================================================================
 // Isotope for Gallery Pinterest style

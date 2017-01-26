@@ -1,3 +1,4 @@
 class Listing < ActiveRecord::Base
-	mount_uploader :image, AvatarUploader
+  paginates_per 25
+  mount_uploader :image, AvatarUploader
 end

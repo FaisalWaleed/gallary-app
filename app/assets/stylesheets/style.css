@@ -4779,7 +4779,7 @@ ul.gallety-filters > li.gf-underline { position: absolute; bottom: 0; left: 0; w
 .gallery:before, .gallery:after { content: " "; display: table; }
 .gallery:after { clear: both; }
 .gallery .gl-item { width: 100%; position: relative; min-height: 1px; padding-left: 0; padding-right: 0; position: relative; min-height: 1px; padding-left: 0; padding-right: 0; position: relative; min-height: 1px; padding-left: 0; padding-right: 0; }
-@media (min-width: 768px) { .gallery .gl-item { float: left; width: 50%; } }
+@media (min-width: 768px) { .gallery .gl-item { float: left; width: 100%; } }
 @media (min-width: 992px) { .gallery .gl-item { float: left; width: 33.33333%; } }
 @media (min-width: 1200px) { .gallery .gl-item { float: left; width: 25%; } }
 .gallery .gl-item.gl-loading { min-height: 225px; }

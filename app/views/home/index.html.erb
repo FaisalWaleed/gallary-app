@@ -12,16 +12,16 @@
    <div class="section no-padding st-invert">
       <section>
          <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
-            <% @listings.try(:each) do |listing| %>
-               <%= render 'listing', listing: listing %>
-            <% end %>
-
+            <%= render 'listing' %>
+            <p class="pagination">
+              <%= link_to_next_page(@listings, 'Next Page', remote: true) %>
+            </p>
          </ul> <!-- gallery -->
       </section>
    </div> <!-- section -->
    <div id="footer" class="ft-single-post text-center">
       <footer>
-         <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a>
+         <!-- <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a> -->
          <span class="loading-spinner" style="display:none;"></span>
       </footer>
    </div>
@@ -50,7 +50,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
     var $lightbox = $('#lightbox');
-    
+
     $('[data-target="#lightbox"]').on('click', function(event) {
         var $img = $(this).find('img'), 
             src = $img.attr('src'),
@@ -73,6 +73,19 @@
 
         $lightbox.find('.modal-dialog').css({'width': $img.width()});
         $lightbox.find('.close').removeClass('hidden');
+    });
+    
+    $('#gallery-w-preview').infinitePages({
+      loading: function() {
+        return $('.loading-spinner').show()
+      }
+    });
+
+    // window.canLoad = true;
+    $(window).scroll(function () { 
+       if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+          $('#gallery-w-preview').infinitePages('check');
+       }
     });
 });
 </script>

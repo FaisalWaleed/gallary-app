@@ -1,17 +1,19 @@
-<li class="gl-item gl-fixed-ratio-item" data-category="*" data-order="30" style="position: absolute; left: 500px; top: 0px;">
-   <a href= "#"  data-toggle="modal" data-target="#lightbox">
-      <figure>
-            <%= image_tag listing.image, class: 'img-responsive', style: "max-width:100%; max-height:100%;" %>
-             <!-- <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid"> -->
-            <figcaption>
-               <div class="middle">
-                  <div class="middle-inner">
-                     <p class="gl-item-icon"><i class="fa fa-picture-o"></i></p>
-                     <p class="gl-item-title">Slider</p>
-                     <p class="gl-item-category">People</p>
+<% @listings.try(:each) do |listing| %>
+   <li class="gl-item gl-fixed-ratio-item" data-category="*" data-order="30" style="position: absolute; left: 500px; top: 0px;">
+      <a href= "#"  data-toggle="modal" data-target="#lightbox">
+         <figure>
+               <%= image_tag listing.image, class: 'img-responsive', style: "max-width:100%; max-height:100%;" %>
+                <!-- <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid"> -->
+               <figcaption>
+                  <div class="middle">
+                     <div class="middle-inner">
+                        <p class="gl-item-icon"><i class="fa fa-picture-o"></i></p>
+                        <p class="gl-item-title">Slider</p>
+                        <p class="gl-item-category">People</p>
+                     </div>
                   </div>
-               </div>
-            </figcaption>
-      </figure>
-   </a>
-</li>
+               </figcaption>
+         </figure>
+      </a>
+   </li>
+<% end %>
