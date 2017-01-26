@@ -1,7 +1,7 @@
 // Append new data
 
 $newItems = $("<%=j render 'listing' %>");
-$("#gallery-w-preview").isotope('insert', $newItems);
+$("#gallery-w-preview").append($newItems).isotope('appended', $newItems);
 
 // Update pagination link
 <% if @listings.last_page? %>

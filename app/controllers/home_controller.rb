@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @listings = Listing.page(params[:page])
+    @listings = Listing.order('created_at DESC').page(params[:page])
 
     respond_to do |format|
       format.html
