@@ -65,7 +65,7 @@
         $lightbox.find('img').attr('alt', alt);
         $lightbox.find('img').css(css);
         $('.social-share-button').data('img', window.location.origin + "/" + src);
-        $('.social-share-button').data('url', window.location.origin );
+        $('.social-share-button').data('url', window.location.origin + "/" + src);
     });
     
     $lightbox.on('shown.bs.modal', function (e) {
