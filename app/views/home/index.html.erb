@@ -14,7 +14,7 @@
          <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
             <%= render 'listing' %>
             <p class="pagination">
-              <%= link_to_next_page(@listings, 'Next Page', remote: true) %>
+              <%= link_to_next_page(@listings, 'Next Page', remote: true, style: 'display: none;') %>
             </p>
          </ul> <!-- gallery -->
       </section>
