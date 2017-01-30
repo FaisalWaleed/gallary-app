@@ -14,7 +14,7 @@
          <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
             <%= render 'listing' %>
             <p class="pagination">
-              <%= link_to_next_page(@listings, 'Next Page', remote: true) %>
+              <%= link_to_next_page(@listings, 'Next Page', remote: true, style: 'display: none;') %>
             </p>
          </ul> <!-- gallery -->
       </section>
@@ -59,13 +59,15 @@
                 'maxWidth': $(window).width() - 100,
                 'maxHeight': $(window).height() - 100
             };
-    
+
         $lightbox.find('.close').addClass('hidden');
         $lightbox.find('img').attr('src', src);
         $lightbox.find('img').attr('alt', alt);
         $lightbox.find('img').css(css);
-        $('.social-share-button').data('img', window.location.origin + "/" + src);
-        $('.social-share-button').data('url', window.location.origin + "/" + src);
+        image_url = $img.data('image-url')
+        console.log(image_url);
+        $('.social-share-button').data('img', image_url);
+        $('.social-share-button').data('url', image_url);
     });
     
     $lightbox.on('shown.bs.modal', function (e) {

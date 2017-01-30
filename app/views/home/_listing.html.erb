@@ -2,8 +2,7 @@
    <li class="gl-item gl-fixed-ratio-item" data-category="*" data-order="30" style="position: absolute; left: 500px; top: 0px;">
       <a href= "#"  data-toggle="modal" data-target="#lightbox">
          <figure>
-               <%= image_tag listing.image, class: 'img-responsive', style: "max-width:100%; max-height:100%;" %>
-                <!-- <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid"> -->
+               <%= image_tag listing.image, class: 'img-responsive', style: "max-width:100%; max-height:100%;", data: {image_url: listing_url(listing, for_social: 1)} %>
                <figcaption>
                   <div class="middle">
                      <div class="middle-inner">

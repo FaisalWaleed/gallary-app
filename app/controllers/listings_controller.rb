@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
   # GET /listings
   # GET /listings.json
   def index
@@ -28,7 +28,7 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else
         format.html { render :new }
