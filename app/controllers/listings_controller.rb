@@ -10,7 +10,6 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
-    redirect_to root_path
   end
 
   # GET /listings/new
