@@ -1,6 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
+  before_action :check_for_redirect, only: [:show]
+  
   # GET /listings
   # GET /listings.json
   def index
@@ -70,5 +72,9 @@ class ListingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
       params.require(:listing).permit(:image)
+    end
+
+    def check_for_redirect
+      return redirect_to root_path if request.referer.present? && !request.referer.include?(request.host)
     end
 end
