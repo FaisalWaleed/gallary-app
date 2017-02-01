@@ -17,7 +17,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @Listing = Listing.last
-    @listing = Listing.new
+    @listinga = Listing.new
   end
 
   # GET /listings/1/edit
