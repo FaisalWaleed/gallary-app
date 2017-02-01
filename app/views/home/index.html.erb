@@ -7,23 +7,22 @@
 <div id="wrapper">
    <%= render 'layouts/sidebar' %>
    <div id="main">
-      <%#= render 'layouts/header' %>
-   </div>
-   <div class="section no-padding st-invert">
-      <section>
-         <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
-            <%= render 'listing' %>
-            <p class="pagination">
-              <%= link_to_next_page(@listings, 'Next Page', remote: true, style: 'display: none;') %>
-            </p>
-         </ul> <!-- gallery -->
-      </section>
-   </div> <!-- section -->
-   <div id="footer" class="ft-single-post text-center">
-      <footer>
-         <!-- <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a> -->
-         <span class="loading-spinner" style="display:none;"></span>
-      </footer>
+     <div class="section no-padding st-invert">
+        <section>
+           <ul id="gallery-w-preview" class="gallery gl-cols-5 gl-fixed-items" style="position: relative; height: 1002px;">
+              <%= render 'listing' %>
+              <p class="pagination">
+                <%= link_to_next_page(@listings, 'Next Page', remote: true, style: 'display: none;') %>
+              </p>
+           </ul> <!-- gallery -->
+        </section>
+     </div> <!-- section -->
+     <div id="footer" class="ft-single-post text-center">
+        <footer>
+           <!-- <a href="#" class="footer-loadmore" data-link="#" data-offset="5" data-items-per-page="5" style="color: white">Load more</a> -->
+           <span class="loading-spinner" style="display:none;"></span>
+        </footer>
+     </div>
    </div>
 
    <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -51,7 +50,7 @@
   $(document).ready(function() {
     var $lightbox = $('#lightbox');
 
-    $('[data-target="#lightbox"]').on('click', function(event) {
+    $('body').on('click', "[data-target='#lightbox']", function(event) {
         var $img = $(this).find('img'), 
             src = $img.attr('src'),
             alt = $img.attr('alt'),
