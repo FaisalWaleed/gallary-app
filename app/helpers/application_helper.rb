@@ -1,5 +1,5 @@
 module ApplicationHelper
   def image_path
-    @listing.present? ? listing_url(@listing) : ""
+    @listing.present? ? request.host + @listing.image_url : ""
   end
 end
